@@ -1,0 +1,15 @@
+{
+  "name": "calculadora",
+  "homepage": "https://github.com/NatxosS/calculadora",
+  "authors": [
+    "Ignacio"
+  ],
+  "description": "\"Calculadora realizada en la asignatura de despliegue de aplicaciones web para aprender a utilizar Git\"",
+  "main": "index.html",
+  "keywords": [
+    "calculadora",
+    "iniciar",
+    "github"
+  ],
+  "license": "MIT"
+}
