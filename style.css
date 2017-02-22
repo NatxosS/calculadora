@@ -1,0 +1,31 @@
+
+#display {
+	height: 100px;
+	background-color: grey;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	border-radius: 5px;
+	box-shadow: #555555 -5px -5px 2px inset
+}
+
+#sumar {
+	height: 90px;
+}
+
+.btn {
+	height: 40px;
+	margin-bottom: 10px;
+}
+
+.container-guay {
+	max-width: 800px;
+	box-shadow: 10px 10px 5px grey;
+	padding-bottom: 20px;
+
+	background: rgba(226,226,226,1);
+background: -moz-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(99%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+background: -webkit-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+}

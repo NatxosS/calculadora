@@ -1,32 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Calculadora 1.0</title>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body>
-		<div class="container">
-			<div id="display">
+		<div class="container-fluid container-guay">
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="display"></div>
+				</div>
 			</div>	
-			<div id="teclado">
-				<button id="siete">7</button>
-				<button id="ocho">8</button>
-				<button id="nueve">9</button>
-				<button id="sumar">+</button><br />
-
-				<button id="cuatro">4</button>
-				<button id="cinco">5</button>
-				<button id="seis">6</button>
-				<button id="restar">-</button><br />
-
-				<button id="uno">1</button>
-				<button id="dos">2</button>
-				<button id="tres">3</button><br />
-				
-				<button id="cero">0</button>
-				<button id="igual">=</button>
+			<div id="teclado" class="row">
+				<div class="col-xs-3"><button id="siete" class="btn btn-primary btn-block">7</button></div>
+				<div class="col-xs-3"><button id="ocho" class="btn btn-primary btn-block">8</button></div>
+				<div class="col-xs-3"><button id="nueve" class="btn btn-primary btn-block">9</button></div>
+				<div class="col-xs-3"><button id="borrar" class="btn btn-primary btn-block">C</button></div>
+			</div>
+			<div class="row" id="numeros">
+				<div class="col-xs-9">
+					<div class="row">
+						<div class="col-xs-4"><button id="cuatro" class="btn btn-primary btn-block">4</button></div>
+						<div class="col-xs-4"><button id="cinco" class="btn btn-primary btn-block">5</button></div>
+						<div class="col-xs-4"><button id="seis" class="btn btn-primary btn-block">6</button></div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4"><button id="uno" class="btn btn-primary btn-block">1</button></div>
+						<div class="col-xs-4"><button id="dos" class="btn btn-primary btn-block">2</button></div>
+						<div class="col-xs-4"><button id="tres" class="btn btn-primary btn-block">3</button></div>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<button id="sumar" class="btn btn-primary btn-block">+</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3">
+					<button id="cero" class="btn btn-primary btn-block">0</button>
+					</div>
+				<div class="col-xs-6">
+					<button id="igual" class="btn btn-primary btn-block">=</button>
+					</div>
+				<div class="col-xs-3">
+					<button id="restar" class="btn btn-primary btn-block">-</button>
+				</div>
 			</div>
 		</div>
 	</body>
