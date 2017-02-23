@@ -1,11 +1,19 @@
+            /* ----------  IMPORTACION DE FUENTES ----------- */
 
+@font-face {
+    font-family: "cal";
+    src: url('Calculator.ttf');
+}
 #display {
 	height: 100px;
 	background-color: grey;
 	margin-top: 25px;
 	margin-bottom: 25px;
 	border-radius: 5px;
-	box-shadow: #555555 -5px -5px 2px inset
+	box-shadow: #555555 -5px -5px 2px inset;
+	padding-top: 2px;
+	text-shadow: 1px 1px 1px #94C93D;
+	color: #77B01A;
 }
 
 #sumar {
@@ -15,6 +23,13 @@
 .btn {
 	height: 40px;
 	margin-bottom: 10px;
+	box-shadow: 5px 5px 3px #0974FF;
+	font-size: 1.25em;
+	vertical-align: center;
+}
+
+.btn:active {
+	box-shadow: 8px 8px 5px blue;
 }
 
 .container-guay {
@@ -23,9 +38,19 @@
 	padding-bottom: 20px;
 
 	background: rgba(226,226,226,1);
-background: -moz-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(99%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
-background: -webkit-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
-background: -o-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
-background: -ms-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+	background: -moz-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(99%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+	background: -webkit-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 99%, rgba(254,254,254,1) 100%);
+}
+
+h1 {
+	text-align: right;
+	padding-right: 20px;
+	font-size: 3em;
+}
+body {
+	font-family: cal;
+	font-size: 2em;
 }
