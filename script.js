@@ -109,25 +109,76 @@ $(function () {
 		}
 	});
 
+				// función multiplicar
+
+	$("#multiplicar").click(function () {			
+		if (variableAactiva) {
+			a += " X ";
+			$("#displayText").html(a);   // mostramos en el display
+			variableAactiva = false;	// le ponemos el más a la cadena a e indicamos que ahora trabajaremos con la variable b
+		} else {
+			alert("Ya indico un operación");
+		}
+	});
+				// función dividir
+
+	$("#dividir").click(function () {
+		if (variableAactiva) {
+			a += " / ";
+			$("#displayText").html(a);   // mostramos en el display
+			variableAactiva = false;	// le ponemos el más a la cadena a e indicamos que ahora trabajaremos con la variable b
+		} else {
+			alert("Ya indico un operación");
+		}
+	});
+
 		// --- función igual  ----
 
 	$("#igual").click(function () {
-		var resultado = a.split(" ");	// la cadena "a" contenia el operando seleccionado concatenado con un espacio
-		a = resultado[0];
-		if (resultado[1] == "+") {			// los separamos con split()
-			a = parseInt(a) + parseInt(b);		// suma
-			b = "0";
+		var resultado = a.split(" ");	// la cadena "a" contenia el operando seleccionado concatenado con un espacio los separamos con split()
 
-			$("#displayText").html(a.toString());   /* mostramos en el display y aprovechamos para que el resultado sea a 
-											* por si queremos seguir haciendo calculos con este resultado */
-		} else {							
-			a = parseInt(a) - parseInt(b);		// resta
+		if (b == "") {
+			alert("Debes introducir un segundo operando");
+		} else {
+			a = resultado[0];
 
-			$("#displayText").html(a.toString());   /* mostramos en el display y aprovechamos para que el resultado sea a 
-											* por si queremos seguir haciendo calculos con este resultado */
+			switch(resultado[1]) {
+				case "+":
+					a = parseInt(a) + parseInt(b);		// suma
+					b = "0";
+
+					$("#displayText").html(a.toString());   /* mostramos en el display y aprovechamos para que el resultado sea a 
+												* por si queremos seguir haciendo calculos con este resultado */
+				break;
+				case "-":
+					a = parseInt(a) - parseInt(b);		// resta
+
+					$("#displayText").html(a.toString());   /* mostramos en el display y aprovechamos para que el resultado sea a 
+												* por si queremos seguir haciendo calculos con este resultado */
+				break;
+				case "X":
+					a = parseInt(a) * parseInt(b);		// multiplicación
+
+					$("#displayText").html(a.toString());   /* mostramos en el display y aprovechamos para que el resultado sea a 
+												* por si queremos seguir haciendo calculos con este resultado */
+				break;
+				case "/":
+					if (b != "0") {
+						a = parseInt(a) / parseInt(b);		// división
+						a = Math.round(a);
+					} else {
+						alert("No se puede dividir entre cero");
+					}
+
+					$("#displayText").html(a.toString());   /* mostramos en el display y aprovechamos para que el resultado sea a 
+												* por si queremos seguir haciendo calculos con este resultado */
+				break;
+			}
+
+			b = "";
+			variableAactiva = true;
 		}
-		b = "";
-		variableAactiva = true;
+
 	});
 
 			//  ********************   TECLA CE  *********************  //
